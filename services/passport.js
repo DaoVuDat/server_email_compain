@@ -22,9 +22,10 @@ passport.use(new GoogleStrategy({
         callbackURL: "/auth/google/callback",
         proxy: true
     }, (accessToken, refreshToken, profile, done) => {
-        done(null, null);
+
         User.findOne( {googleId: profile.id} )
             .then((existingUser) => {
+                console.log("in mongodb");
                 if(existingUser) {
                     // we already have a record with the given profile ID
                     done(null, existingUser);

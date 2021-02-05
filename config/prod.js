@@ -2,6 +2,6 @@
 module.exports = {
     googleClientId: process.env.GOOGLE_CLIENT_ID,
     googleClientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    mongoURI: "mongodb+srv://daovudatprod:xGFAUcfnZtPu4EN4@emaily-prod.ebdp7.mongodb.net/emailydb?retryWrites=true&w=majority",
-    cookieKey: process.env.COOKIE_KEY,
+    mongoURI: process.env.MONGO_URI,
+    cookieKey: process.env.COOKIE_KEY
 };
